@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/SignUp.css') }}">
+</head>
+<body>
+    <form action="http://127.0.0.1:5000/" method="post">
+        <p style="font-size:40px">Bike Store</p>
+        <p style="font-size:20px">Register Below</p>
+        <label>Name:</label><br>
+        <input type = 'text' id = 'realname' name = 'fullname'>
+        <br>
+        <br>
+        <label>Email:</label><br>
+        <input type = 'text' id = 'email' name ='fullemail'>
+        <br>
+        <br>
+        <label>Username:</label><br>
+        <input type = 'text' id = 'username' name ='usrnme'>
+        <br>
+        <br>
+        <label>Password:</label><br>
+        <input type = 'password' id = 'password' name = 'pswd'>
+        <br>
+        <br>
+        <br><input type = 'submit' class = 'testing'><br>
+        <p name = 'exists'>{{exists}}</p>
+        <br><a href = "http://127.0.0.1:5000/Login">Already have an account?</a>
+    </form>
+</body>
+</html>

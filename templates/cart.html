@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <Style>
+        .container-content-section{
+            text-align: center;
+            background-color:#3b3a30;
+            color:#c0ded9;
+            width: 800px;
+            margin-left:300px ;
+            height:400px ;
+        }
+    
+        .cart-items{
+            display: flex;
+          flex-direction: column;
+          padding: 20px;
+    
+    
+    
+        }
+    
+        .btn{
+        color: #c0ded9;
+        }
+    
+        .btn:hover{
+        color: #eaece5;
+        }
+    
+    
+        body{
+           background-image: url("../static/cart.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+    
+        }
+    
+        .section-header{
+           text-align:center;
+        }
+    
+    
+        .cart-total{
+            margin-top: 25px;
+    
+    
+    
+        }
+    
+        </Style>
+    
+        </head>
+        <body>
+    
+            <div class="section-header">
+            <h2>CART</h2>
+            </div>
+            <section class="container-content-section" >
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column" style="margin-right: 100px; margin-left: -50px;">IMAGE</span>
+                <span class="cart-item cart-header cart-column" style="margin-right: 100px;">NAME</span>
+                <span style="margin-right: 30px;"></span>
+                <span class="cart-price cart-header cart-column" style="margin-right: 60px;">PRICE</span>
+                <span style="margin-right: 40px;"></span>
+                <span class="cart-quantity cart-header cart-column" style="margin-right: 80px;">QUANTITY</span>
+                <span class="cart-quantity cart-header cart-column" style="margin-right: -50px;">SUBTOTAL</span>
+            </div>
+            <div class="cart-row" id="obj">
+                <span id="htmlPass" style="display: none;">{{htmlPass}}</span>
+            </div>
+            <div class="cart-items"> 
+                
+        <p class="cart-items"></p>
+    
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">${{total}}</span>
+            </div>
+            <a href="http://127.0.0.1:5000/receipt" id="paybtn" class="btn btn-primary btn-purchase payment" style="margin-bottom: 50px;" type="button" >PURCHASE</a>
+        </section>
+    
+        </body>
+        <script>
+            localStorage.setItem('cart',document.getElementById("htmlPass").innerHTML)
+            x = localStorage.getItem('cart')
+            x = x.substring(1,x.length-1)
+            x = x.split(',')
+            for(i in x){
+                x[i] = x[i].substring(6,x[i].length-7)
+                x[i] = String(x[i])
+                document.getElementById('obj').insertAdjacentHTML('afterend', x[i])
+            }
+        </script>
+</html>

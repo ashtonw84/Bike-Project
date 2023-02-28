@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bike Store</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <script type=text/javascript src="{{
+            url_for('static', filename='script/premade.js') }}"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+            
+            
+            
+    </head>
+    <body style="background-color: #eaece5;">
+        <h1 class="menu menu-large" style="background-color:#eaece5;">Bike Store</h1>
+        <header class="main-header" >
+            
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/bike">Bike Store</a></li>
+                    <li><a href="http://127.0.0.1:5000/Customize">Parts</a></li>
+                    <li><a href="http://127.0.0.1:5000/Login">Logout</a></li>
+                    <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><a href="http://127.0.0.1:5000/cart" id="number" style="font-size: 25px;width: 5%;"><i class="fa badge"style="font-size:25px; width: 5%; padding-left: 0px;margin-right: 30px;" value = 0>&#xf07a;</i>{{quantity}}</a></li>
+                    <li><i class="fa fa-user" style='font-size:28px'></i>{{fullname1}}</li>
+                </ul>
+            </nav>
+           
+                
+        </header>
+        <form action="http://127.0.0.1:5000/bike" method="POST">
+        <section class="container content-section" style="background-color: #b2c2bf; margin-bottom: 20px;">
+            <h2 class="section-header">Bikes for sale</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike1" style="text-decoration: none; color: black">{{bike}}</a>
+                        <span class= "tooltiptext">{{bikedesc}}</span></div>
+                    <img class="shop-item-image" src={{bikeimg}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bikeprice}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item" >
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike2" style="text-decoration: none; color: black">{{bike1}}</a>
+                        <span class= "tooltiptext">{{bike1desc}}</span></div>
+                    <img class="shop-item-image" src={{bike1img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike1price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike1}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item" >
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike3" style="text-decoration: none; color: black">{{bike2}}</a>
+                        <span class= "tooltiptext">{{bike2desc}}</span></div>
+                    <img class="shop-item-image" src={{bike2img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike2price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike2}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                     <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike4" style="text-decoration: none; color: black">{{bike3}}</a>
+                        <span class= "tooltiptext">{{bike3desc}}</span></div>
+                    <img class="shop-item-image" src={{bike3img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike3price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike3}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike5" style="text-decoration: none; color: black">{{bike4}}</a>
+                        <span class= "tooltiptext">{{bike4desc}}</span></div>
+                    <img class="shop-item-image" src={{bike4img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike4price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike4}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike6" style="text-decoration: none; color: black">{{bike5}}</a>
+                        <span class= "tooltiptext">{{bike5desc}}</span></div>
+                    <img class="shop-item-image" src={{bike5img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike5price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike5}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike7" style="text-decoration: none; color: black">{{bike6}}</a>
+                        <span class= "tooltiptext">{{bike6desc}}</span></div>
+                    <img class="shop-item-image" src={{bike6img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike6price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike6}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike8" style="text-decoration: none; color: black">{{bike7}}</a>
+                        <span class= "tooltiptext">{{bike7desc}}</span></div>
+                    <img class="shop-item-image" src={{bike7img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike7price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike7}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike9" style="text-decoration: none; color: black">{{bike8}}</a>
+                        <span class= "tooltiptext">{{bike8desc}}</span></div>
+                    <img class="shop-item-image" src={{bike8img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike8price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike8}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title"><a href="http://127.0.0.1:5000/bike10" style="text-decoration: none; color: black">{{bike9}}</a>
+                        <span class= "tooltiptext"> {{bike9desc}}</span></div>
+                    <img class="shop-item-image" src={{bike9img}}>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{bike9price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{bike9}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+            </div>
+        </form>
+        </section>
+    </body>
+</html>

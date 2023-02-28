@@ -1,0 +1,33 @@
+body{
+  flex-direction: column;
+  background-color: beige;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  background-image: url("../465824.jpg");
+}
+
+form{
+  border: 1px dashed lightblue;
+  width: 25%;
+  background-color: lightblue;
+  align-self: center;
+  margin-left: 37%;
+  padding: 20px;
+}
+
+a{
+  text-decoration: none;
+  border: 1px solid black;
+  color: black;
+  background-color: lightcoral;
+  padding: 5px;
+  margin: 10px;
+}
+
+div#horiz{
+  display: flex;
+  flex-direction: row;
+}

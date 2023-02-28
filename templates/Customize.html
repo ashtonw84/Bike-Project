@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #c0ded9;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    color:#b2c2bf
+}
+
+.main-nav li {
+    padding: 0 5%;
+    padding-left: 100px;
+}
+
+.nav a:hover {
+    
+    text-decoration: underline;
+    color: #c0ded9;
+}
+
+.main-header {
+    background-color: #050505;
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 50px;
+    
+    
+  
+}
+
+.menu {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: #040404;
+    
+    
+    
+    
+}
+
+.menu-large {
+    font-size: 8em;
+    
+}
+
+.content-section {
+    margin: 1em;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+
+}
+.section-header {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 4em;
+    letter-spacing: -2px;
+    border-bottom: 2px solid #c0ded9;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #120e0e;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 100px;
+}
+
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #c0ded9;
+    background-color: #2b2a2a;
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: #0f0e0e;
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #f4ecec;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #c0ded9;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #3b3a30;
+}
+
+
+
+.shop-item {
+    
+    color: white;
+    text-decoration: none;
+    padding-left: 1%;
+    padding-right: 2%;
+
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #040303;
+    margin-bottom: 15px;
+    text-decoration: none;
+    margin-top: 60px;
+}
+
+.shop-item-image {
+    height: 250px;
+    margin-top: 30px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    
+    color: #030202;
+    font-weight: 600;
+    padding-left: 10px;
+    
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #020202;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #090909;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+   
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #030202;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #060606;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.btn-danger {
+    color: white;
+    background-color: #8d0000;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #8d0000;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #8d0000;
+    background-color: #ec0505;
+    color: #ee0a0a;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid #e91313;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #080808;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #040404;
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.payment{
+text-decoration: none;
+width: 200px;
+margin-bottom: 50px;
+
+}
+
+
+  .tooltip {
+    position: relative;
+   
+  
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+   font-size: 15px;
+    color: rgb(229, 33, 33);
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+    color: #030303;
+  
+
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  
+
+        </style>
+
+
+
+
+
+        <title>Custom Bike Store</title>
+        
+    </head>
+    <body style="background-color: #eaece5;">
+        <h1 class="menu menu-large" style="background-color:#eaece5;">Parts for Bikes</h1>
+        <header id="headerr" class="main-header">
+            
+            <form action="" method="post">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/bike">Bike Store</a></li>
+                    <li><a href="http://127.0.0.1:5000/Customize">Parts</a></li>
+                    <li><a href="http://127.0.0.1:5000/Login">Logout</a></li>
+                    <form action="" method="post">
+                    <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><a href="http://127.0.0.1:5000/cart" id="number" style="font-size: 25px;width: 5%;"><i class="fa badge"style="font-size:25px; width: 5%; padding-left: 0px;margin-right: 30px;" value = 0>&#xf07a;</i>{{quantity}}</a></li>
+                    </form>
+                    <li><i class="fa fa-user" style='font-size:28px;'></i>{{fullname1}}</li>
+            
+                </ul>
+                <hr style="color: #eaece5">
+                <ul style="border-top: #eaece5;">
+                    <li><a href="#bodyframe" style="color: #b2c2bf; margin-left: -130px;margin-bottom: -40px;">Body Frames</a></li>
+                    <li><a href="#handlebars" style="color: #b2c2bf; margin-left: -130px;margin-bottom:-40px">Handle Bars</a></li>
+                    <li><a href="#wheels" style="color: #b2c2bf; margin-left: -130px;margin-bottom:-40px">Wheels</a></li>
+                    <li><a href="#seat" style="color: #b2c2bf; margin-left: -130px;margin-bottom: -40px">Seat</a></li>
+            </form>          
+                </ul>
+            </nav>
+        </header>
+        <form method="post">
+            
+        <section class="container content-section" style="background-color: #b2c2bf;">
+            <h2 id='bodyframe'class="section-header divtitle" style="margin: right 100px;;">Body Frames</h2>
+            <a href="#headerr" style="color: black; margin-left: 90%;">To Top</a>
+        
+            
+            <div class="shop-items">
+                
+                <form action="" method="post">
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike}}
+                        <span class= "tooltiptext">{{Cbikedesc}}</span></div>
+                    <img class="shop-item-image" style="width: 250px;" src="{{Cbikeimg}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbikeprice}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item" >
+                    <div class="tooltip shop-item-title">{{Cbike1}}
+                        <span class= "tooltiptext">{{Cbike1desc}}</span></div>
+                    <img class="shop-item-image" src="{{Cbike1img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike1price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike1}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item" >
+                    <div class="tooltip shop-item-title">{{Cbike2}}
+                        <span class= "tooltiptext">{{Cbike2desc}}</span></div>
+                    <img class="shop-item-image" style="width: 280px;" src="{{Cbike2img}}">
+                    <div class="shop-item-details" style="width: 94%;">
+                        <span class="shop-item-price">${{Cbike2price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike2}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                     <div class="tooltip shop-item-title">{{Cbike3}}
+                        <span class= "tooltiptext">{{Cbike3desc}}</span></div>
+                    <img class="shop-item-image" src="{{Cbike3img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike3price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike3}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike4}}
+                        <span class= "tooltiptext">{{Cbike4desc}}</span></div>
+                    <img class="shop-item-image" style="width: 300px; height: 190px" src="{{Cbike4img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike4price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike4}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike5}}
+                        <span class= "tooltiptext">{{Cbike5desc}}</span></div>
+                    <img class="shop-item-image" style="width: 250px; height: 190px;" src="{{Cbike5img}}">
+                    <div class="shop-item-details" style="width: 90%;">
+                        <span class="shop-item-price">${{Cbike5price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike5}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="container content-section" style="background-color: #b2c2bf;">
+            <h2 id='handlebars'class="section-header divtitle">Handle Bars</h2>
+            <a href="#headerr" style="color: black; margin-left: 90%;">To Top</a>
+            
+            <div class="shop-items">
+
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike6}}
+                        <span class= "tooltiptext">{{Cbike6desc}}</span></div>
+                    <img class="shop-item-image" src="{{Cbike6img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike6price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike6}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike7}}
+                        <span class= "tooltiptext">{{Cbike7desc}}</span></div>
+                    <img class="shop-item-image" style="width: 280px;" src="{{Cbike7img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike7price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike7}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike8}}
+                        <span class= "tooltiptext">{{Cbike8desc}}</span></div>
+                    <img class="shop-item-image" src="{{Cbike8img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike8price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike8}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike9}}
+                        <span class= "tooltiptext">{{Cbike9desc}}</span></div>
+                    <img class="shop-item-image" src="{{Cbike9img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike9price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike9}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container content-section" style="background-color: #b2c2bf;">
+            <h2 id='wheels'class="section-header divtitle">Wheels</h2>
+            <a href="#headerr" style="color: black; margin-left: 90%;">To Top</a>
+                
+
+
+            <div class="shop-items">
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike10}}
+                        <span class= "tooltiptext">{{Cbike10desc}}s</span></div>
+                    <img class="shop-item-image" style="width: 350px;" src="{{Cbike10img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike10price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike10}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike11}}
+                        <span class= "tooltiptext">{{Cbike11desc}}</span></div>
+                    <img class="shop-item-image" style="width: 360px;" src="{{Cbike11img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike11price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike11}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike12}}
+                        <span class= "tooltiptext">{{Cbike12desc}}</span></div>
+                    <img class="shop-item-image" style="width: 370px;" src="{{Cbike12img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike12price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike12}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike13}}
+                        <span class= "tooltiptext">{{Cbike13desc}}</span></div>
+                    <img class="shop-item-image" style="width: 350px;" src="{{Cbike13img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike13price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike13}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="container content-section" style="background-color: #b2c2bf;">
+            <h2 id='seat'class="section-header divtitle">Seats</h2>
+            <a href="#headerr" style="color: black; margin-left: 90%;">To Top</a>
+                
+            
+
+            <div class="shop-items">
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike14}}
+                        <span class= "tooltiptext">{{Cbike14desc}}</span></div>
+                    <img class="shop-item-image" style="width: 320px;" src="{{Cbike14img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike14price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike14}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike15}}
+                        <span class= "tooltiptext">{{Cbike15desc}}</span></div>
+                    <img class="shop-item-image" style="width: 350px;" src="{{Cbike15img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike15price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike15}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike16}}
+                        <span class= "tooltiptext">{{Cbike16desc}}</span></div>
+                    <img class="shop-item-image" style="width: 320px;height: 250px;" src="{{Cbike16img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike16price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike16}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <div class="tooltip shop-item-title">{{Cbike17}}
+                        <span class= "tooltiptext">{{Cbike17desc}}</span></div>
+                    <img class="shop-item-image" style="width: 350px;" src="{{Cbike17img}}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">${{Cbike17price}}</span>
+                        <input class="btn btn-primary shop-item-button" type="submit" name="{{Cbike17}}" onclick="counter()" value="Add to Cart">
+                    </div>
+                </div>
+                <p id="cartarr">[]</p>
+        </section>
+
+
+            </div>
+
+        </form>
+    </body>
+</html>

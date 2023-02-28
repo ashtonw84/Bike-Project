@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #c0ded9;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    color:#b2c2bf
+}
+
+.main-nav li {
+    padding: 0 5%;
+    padding-left: 100px;
+}
+
+.nav a:hover {
+    
+    text-decoration: underline;
+    color: #c0ded9;
+}
+
+.main-header {
+    background-color: #050505;
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 50px;
+    
+    
+  
+}
+
+.menu {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: #040404;
+    
+    
+    
+    
+}
+
+.menu-large {
+    font-size: 8em;
+    
+}
+
+.content-section {
+    margin: 1em;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+
+}
+.section-header {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 4em;
+    letter-spacing: -2px;
+    border-bottom: 2px solid #c0ded9;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #120e0e;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 100px;
+}
+
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #c0ded9;
+    background-color: #2b2a2a;
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: #0f0e0e;
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #f4ecec;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #c0ded9;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #3b3a30;
+}
+
+
+
+.shop-item {
+    
+    color: white;
+    text-decoration: none;
+    padding-left: 1%;
+    padding-right: 2%;
+
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #040303;
+    margin-bottom: 15px;
+    text-decoration: none;
+    margin-top: 60px;
+}
+
+.shop-item-image {
+    height: 250px;
+    margin-top: 30px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    
+    color: #030202;
+    font-weight: 600;
+    padding-left: 10px;
+    
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #020202;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #090909;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+   
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #030202;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #060606;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.btn-danger {
+    color: white;
+    background-color: #8d0000;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #8d0000;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #8d0000;
+    background-color: #ec0505;
+    color: #ee0a0a;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid #e91313;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #080808;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #040404;
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.payment{
+text-decoration: none;
+width: 200px;
+margin-bottom: 50px;
+
+}
+
+
+  .tooltip {
+    position: relative;
+   
+  
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+   font-size: 15px;
+    color: rgb(229, 33, 33);
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+    color: #030303;
+  
+
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  * {box-sizing:border-box}
+
+/* Slideshow CSS */
+.slideshow-container {
+  max-width: 500px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(10, 10, 10);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+        </style>
+
+
+
+
+
+        <title>Bike Details</title>
+    <link type="text/css" rel="stylesheet" href="magicscroll/magicscroll.css"/>   
+    </head>
+    <body style="background-color: #eaece5;">
+        <h1 class="menu menu-large" style="background-color:#eaece5;">Details Below</h1>
+        <header id="headerr" class="main-header">
+            
+            <form action="" method="post">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/bike">Bike Store</a></li>
+                    <li><a href="http://127.0.0.1:5000/Customize">Parts</a></li>
+                    <li><a href="http://127.0.0.1:5000/Login">Logout</a></li>
+                    <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><a href="http://127.0.0.1:5000/cart" id="number" style="font-size: 25px;width: 5%;"><i class="fa badge"style="font-size:25px; width: 5%; padding-left: 0px;" value = 0>&#xf07a;</i></a></li>
+                    <li><i class="fa fa-user" style='font-size:28px;'></i>{{fullname1}}</li>
+            
+               
+            </form>          
+                
+            </nav>
+        </header>
+    
+            
+        <section class="container content-section" style="background-color: #b2c2bf;">
+            <section class="container content-section" style="background-color: #b2c2bf;">
+                <h2 class="section-header divtitle">Heybike Mars Electric Bike</h2>
+                
+                <div class="slideshow-container">
+
+                    
+                    <div class="mySlides fade">
+                    
+                      <img src="https://i5.walmartimages.com/asr/d67c1ad6-5faa-42c6-9e26-b97d4381f868.de3a10dd635ffe8290416ee60f41ceff.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" style="width:100%">
+                      
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      
+                      <img src="https://i5.walmartimages.com/asr/1c22819d-34e2-42a6-ace6-4c1450d1b93b.c12f598ff4e08879b9ccb15f0577c438.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" style="width:100%">
+                      
+                    </div>
+                  
+
+                    <div class="mySlides fade">
+                        
+                        <img src="https://i5.walmartimages.com/asr/17736443-5250-4539-aa4c-03303638a957.18a59bf87ebc6d620c45d1ab1e88a38f.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" style="width:100%">
+                        
+                      </div>
+
+                      <div class="mySlides fade">
+                        
+                        <img src="https://i5.walmartimages.com/asr/a5c04e35-3c67-48a0-a94d-3f17d81e2d02.4cbfe80aa92a03ca235b4c9aac9080d8.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" style="width:100%">
+                        
+                      </div>
+                    
+
+
+                      <div class="mySlides fade">
+                        
+                        <img src="https://i5.walmartimages.com/asr/dbd809ed-1a72-4020-9481-c6e8c46cf728.d3c129a015657d14f4fa695f89daeed7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" style="width:100%">
+                        
+                      </div>
+                    
+
+                      <div class="mySlides fade">
+                        
+                        <img src="https://i5.walmartimages.com/asr/ec1231a3-67c4-4d7e-b9b2-09c8ae5eaaca.4b0255aa9722383c4e7258f66234dce7.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" style="width:100%">
+                        
+                      </div>
+                    
+                    
+                  
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                    
+                  
+                
+                
+        
+                
+                
+                <p style="color: #020202; line-height: 1.0;">Affordable electric fat tire bike– The new Heybike Mars seamlessly blends rugged capabilities, exceptional comfort, and affordable cost. With 20'' x 4” fat tires, a potent 500W motor, and a 48V 12.5AH long range capacity battery, our electric bike is perfect for off-road adventures, weekend spins around the city, and everything in between. It’s no wonder it’s the first electric fat tires bike you should have.
+                    </p>
+                    <ul >
+                    <li style="color: black">48 miles range and 20 mph top speed</li>
+                    <li style="color: black">48V 12.5Ah batteries.</li>
+                    <li style="color: black">500w Brushless Geared Motor.</li>
+                    <li style="color: black">4 inch wide puncture-resistant fat tires and dual suspension.</li>
+                    <li style="color: black">Mars can take you are almost limitless: downtown around, rocky roads, sandy beaches, snowy suburbs, and even urban jungles.</li>
+                    <li style="color: black">3 riding modes and Shimano 7-speed. </li>
+                    <li style="color: black">Origamis down to fit your car.</li>
+                    </ul>
+                    <br>
+                    
+                    <p style="color: #020202;">Want to buy parts for this bike<a href="http://127.0.0.1:5000/Customize" style="color: #020202; text-decoration: none"> click here</a></p>
+
+                    <button class="btn btn-primary shop-item-button" type="button" onclick="counter()">Add to cart</button>
+            
+                    
+                
+    
+               
+            </section>
+
+        
+
+
+
+
+
+           
+        </section>
+
+        
+        
+    </body>
+    <script>
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+  
+</html>

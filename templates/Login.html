@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <form action="http://127.0.0.1:5000/Login" method="post">
+    
+        <h1>Login Page</h1>
+        <label>Username: </label><br>
+        <input type = 'text' id = 'username1' name = 'fullname1'><br>
+        <label>Password: </label><br>
+        <input type = 'password' id = 'password1' name = 'pswrd1'><br>
+        <br><input type = 'submit' class = 'testing'><br>
+        <p name = 'message'>{{message}}</p>
+        <p name = 'decoded'>{{decoded}}</p>
+        <br>
+        <br>
+    </form>
+</body>
+<script>
+    localStorage.clear()
+</script>
+</html>
